@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>About</title>
+        <style>
+            body {
+                margin: 0 15%;
+                font-family: sans-serif;
+            }
+            h1 {
+                text-align: center;
+                font-family: serif;
+                font-weight: normal;
+
+                border-bottom: 1px solid #57b1dc;
+                margin-top: 3px;
+
+            }
+            h1 a{
+                float:right;
+                font-size: 65%;
+            }
+            h2 {
+                color: #57b1dc;
+                
+                font-size: 125%;
+            }
+
+            p {
+                font-size: 125%;
+            }
+
+            li {
+                display: inline;
+                margin: 10px;
+            }
+
+            img {
+                float: right;
+                margin: 0 0 10px 10px;
+            }
+        
+        </style>
+    </head>
+        
+    <body>
+        <header>
+                 
+                <h1>Intelligent International Portfolio Manager
+                    <a href="/pitch0">_></a> <a href="/portwouldbeloaded"><</a> <a href="/navigate">._</a>   </h1>
+                
+                
+                 
+
+        </header>
+
+            <h2>Portfolio management through data science</h2>
+
+
+            <img src='{{ url_for('static',filename='JHV head shot 00 - 170907 - 500k.jpg')}}' alt="JH Viljoen"
+            height="182" width="123"> 
+
+            <p>This app has been developed by Johannes Henning Viljoen (MBA, M.Eng).  He can be reached 
+                through his personal website: <a href="http://stratlytic.com">http://stratlytic.com</a>.</p>
+
+            
+
+            <p>For many people, investing outside their home countries, is something they do not know much about, but they would like 
+                to be able to put some of their savings in off-shore markets.  Not knowing where to put the funds, and what the 
+                options are, are often hurdles to investing abroad. </p>
+
+            <p>Our goal is to open up the opaqueness of foreign investment, and to do so using Artifial Intelligence (AI).  Cutting edge 
+                Machine Learning and Data Science techniques can extract value from the large volumes of data from the markets 
+                much better than humans can, and in the process AI can maximize return, and minimize risk given the investor's risk 
+                appetite.
+            </p>
+            
+            <p>Data from the last couple of decades indicates that most active management portfolio managers do not beat the S&P500 
+                index when measured over a 10 year period.  As a minimum, the index has been doing very well, and also offers a natural 
+                risk hedge since many securities are invested in.  This argument is extended by our app by investing in off-shore indeces 
+                for each country's stock exchange that is included in the hyperspace to be optimized.  
+
+            <p>The hyperspace to be optimized is characterized by this loss function to be minimized: 
+                PortfolioRiskReturnBalance = w<sup>T</sup>Ew - qRw.</p>
+
+            
+
+
+
+        <footer>
+            <p><small>Copyright &copy;2017 Intelligent International Portfolio Manager.</small></p>
+
+        </footer>
+
+    </body>
+</html>
