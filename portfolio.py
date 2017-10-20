@@ -154,8 +154,8 @@ class asset:
         self.inittext = self.name + '; ' + 'self.growthrate : ' + str(self.growthrate)
         self.std = self.pricehistory.std()
         
-        print('self.std : ',self.std)
-        print('self.growthpyearstd : ',self.growthpyearstd)
+        #print('self.std : ',self.std)
+        #print('self.growthpyearstd : ',self.growthpyearstd)
         self.inittext += '; ' + 'self.std : ' + str(self.std)
 
 
@@ -183,10 +183,10 @@ class asset:
                 den += float(i + 1)/float(lentoiterate)
             self.growthpyearmean = num/den
             self.growthpyearstd = self.growthpyearhistory[-lentoiterate:].std()
-            print(self.name)
-            print(self.growthpyearmean)
-            print(self.growthpyearstd)
-            print('\n')
+            #print(self.name)
+            #print(self.growthpyearmean)
+            #print(self.growthpyearstd)
+            #print('\n')
 
 
     def calcgrowthrate(self):
@@ -203,8 +203,8 @@ class asset:
         #self.growthpyearmean = self.growthpyearhistory.mean()
         self.weightedave()
         self.growthrate = (self.pricehistory[-1]**(1.0/float(self.lenpricehistory)))**12.0 - 1.0
-        print('self.growthrate : ',self.growthrate)
-        print('self.growthpyearmean: ',self.growthpyearmean)
+        #print('self.growthrate : ',self.growthrate)
+        #print('self.growthpyearmean: ',self.growthpyearmean)
 
 
 #subportfolio class definition --------------------------------------------------------------------
@@ -326,7 +326,7 @@ class portfolio:  #Over arching class for the entire model layer of the app.  Pr
                     #app.py
     def __init__(self):
         self.nrassets = RangeIncluded[1] - RangeIncluded[0]
-        print(self.nrassets)
+        #print(self.nrassets)
         self.marketdatas = list()
         self.assets = list()
         self.subportfolios = list()
@@ -434,16 +434,16 @@ class portfolio:  #Over arching class for the entire model layer of the app.  Pr
         self.printportstats(0)
 
         for i in range(1, len(PortfolioRiskTolleranceList)):
-            print('\n')
+            #print('\n')
             if optimise == True:
                 self.subportfolios[i].optimiseportfolio()
-            print('\n')
+            #print('\n')
             if optimise == True:
                 self.subportfolios[i].calcportriskreturnbalance()
             self.printportstats(i)
 
         if optimise == True:
-            print('Dilling sub-portfolios to disk...')
+            #print('Dilling sub-portfolios to disk...')
             dill.dump(self.subportfolios, open('subportfoliosbackup.pkd', 'wb')) 
 
     def howportwouldhavedone(self, portindex): #Follow the actual market figures NumMonthsMonthsPreT0Fit months into the future to T0 for plot.
